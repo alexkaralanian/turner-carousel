@@ -2,7 +2,7 @@ import React from 'react';
 import './InputElement.css';
 
 const InputElement = ({handleChange, handleSubmit, inputValue}) =>  (
-  <div className="Row">
+  <div className="Row animated fadeIn">
     <form
       className="input-row"
       onSubmit={handleSubmit}
@@ -19,6 +19,5 @@ const InputElement = ({handleChange, handleSubmit, inputValue}) =>  (
     </form>
   </div>
 );
-
 
 export default InputElement;

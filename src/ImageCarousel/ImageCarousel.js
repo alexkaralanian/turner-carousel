@@ -42,8 +42,7 @@ class ImageCarousel extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      imageIndex: 0,
-      opacity: 1
+      imageIndex: 0
     }
     this.nextImage = this.nextImage.bind(this)
     this.prevImage = this.prevImage.bind(this)
@@ -64,7 +63,6 @@ class ImageCarousel extends React.Component {
       this.setState({
         imageIndex: this.state.imageIndex - 1
       })
-
     }
   }
 
