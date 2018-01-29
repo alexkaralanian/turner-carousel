@@ -84,7 +84,7 @@ class App extends Component {
         {this.state.array.length ?
           <section className="Grid">
             <div className="Row animated fadeInUp">
-              {this.state.slicedArray && this.state.slicedArray.map(carousel => carousel)}
+              {this.state.slicedArray && this.state.slicedArray.map(carousel => <div className="Cell" key={this.state.slicedArray.indexOf(carousel)}>{carousel}</div>)}
             </div>
           </section> : null
         }
