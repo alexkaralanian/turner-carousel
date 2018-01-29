@@ -69,18 +69,15 @@ class ImageCarousel extends React.Component {
   }
 
   render(){
-
     return (
       <div className="Cell">
         <div className="ImageContainer">
           <div onClick={this.nextImage} className="RightArrow">
             <img className="Icon" src={RightArrow} />
           </div>
-
           <div onClick={this.prevImage} className="LeftArrow">
             <img className="Icon" src={LeftArrow} />
           </div>
-
           <figure >
             <img
               className="Image" src={imageURLs[this.state.imageIndex].id}
@@ -90,12 +87,10 @@ class ImageCarousel extends React.Component {
               <span>{imageURLs[this.state.imageIndex].caption}</span>
             </figcaption>
           </figure>
-
         </div>
       </div>
     );
   }
 }
-
 
 export default ImageCarousel;

@@ -70,9 +70,9 @@ class App extends Component {
     return (
       <main className="wrapper">
         <section className="Grid">
-          <header className="Row">
-              <h1 className="CardHeader animated fadeInDown">
-                Turner Carousel Project
+          <header className="Row animated fadeInDown">
+              <h1 className="CardHeader">
+                Turner Carousel
               </h1>
           </header>
           <InputElement
