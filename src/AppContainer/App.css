@@ -5,11 +5,12 @@ header {
   width: 100%;
   padding: 10px;
   border-radius: 2px;
-  height: 6em;
+  min-height: 6em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 header h1 {
+  margin-top: 10px;
   font-weight: 200;
   color: white;
   font-size: 3em;

@@ -11,7 +11,7 @@ const InputElement = ({handleChange, handleSubmit, inputValue}) =>  (
         type="text"
         onChange={handleChange}
         value={inputValue}
-        placeholder="please enter a number..."
+        placeholder="Enter a number..."
       />
       <button>
         <span>submit</span>
