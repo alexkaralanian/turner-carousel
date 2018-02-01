@@ -68,7 +68,6 @@ class ImageCarousel extends React.Component {
 
   render(){
     return (
-
         <div className="ImageContainer">
           <div onClick={this.nextImage} className="RightArrow">
             <img className="Icon" src={RightArrow} alt="Right-Arrow-Icon" />
@@ -76,11 +75,11 @@ class ImageCarousel extends React.Component {
           <div onClick={this.prevImage} className="LeftArrow">
             <img className="Icon" src={LeftArrow} alt="Left-Arrow-Icon" />
           </div>
-          <figure >
-            <img
-              className="Image" src={imageURLs[this.state.imageIndex].id}
-              alt={imageURLs[this.state.imageIndex].alt}
-            />
+          <figure>
+              <img
+                className="Image" src={imageURLs[this.state.imageIndex].id}
+                alt={imageURLs[this.state.imageIndex].alt}
+              />
             <figcaption>
               <span>{imageURLs[this.state.imageIndex].caption}</span>
             </figcaption>

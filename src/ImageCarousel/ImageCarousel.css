@@ -52,11 +52,19 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .Image {
   width: 100%;
   height: 100%;
+  transition: 0.3s;
+  /*transition-timing-function: ease-in-out;*/
+}
+
+.Image:hover {
+  width: 110%;
+  height: 110%;
 }
 
 figcaption {
@@ -76,5 +84,3 @@ figcaption span {
   color: white;
   text-align: center;
 }
-
-
