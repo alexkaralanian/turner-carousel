@@ -16,6 +16,7 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.fetchCarousels = this.fetchCarousels.bind(this);
     this.onScroll = this.onScroll.bind(this);
+    this.keyPress = this.keyPress.bind(this)
   }
 
   handleSubmit(evt) {
@@ -52,6 +53,10 @@ class App extends Component {
     }
   }
 
+  keyPress(e){
+    console.log(e)
+  }
+
   fetchCarousels(inputValue){
     let carouselArray = []
       for (let i = 0; i < inputValue; i++){
@@ -83,7 +88,7 @@ class App extends Component {
         </section>
         {this.state.array.length ?
           <section className="Grid">
-            <div className="Row animated fadeInUp">
+            <div className="Row animated fadeInUp" onKeyPress={this.keyPress}>
               {this.state.slicedArray && this.state.slicedArray.map(carousel => <div className="Cell" key={this.state.slicedArray.indexOf(carousel)}>{carousel}</div>)}
             </div>
           </section> : null

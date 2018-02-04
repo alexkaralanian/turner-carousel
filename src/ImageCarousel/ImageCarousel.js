@@ -39,6 +39,7 @@ function shuffle (array) {
 }
 
 class ImageCarousel extends React.Component {
+
   constructor(props){
     super(props)
     this.state = {
@@ -46,9 +47,14 @@ class ImageCarousel extends React.Component {
     }
     this.nextImage = this.nextImage.bind(this)
     this.prevImage = this.prevImage.bind(this)
+    this.onKeyPress = this.onKeyPress.bind(this)
 
     shuffle(imageURLs)
   }
+
+  // componentDidMount(){
+  //   document.addEventListener('keydown', this.keyPress, false);
+  // }
 
   nextImage(){
     if (this.state.imageIndex < imageURLs.length - 1) {
@@ -66,9 +72,19 @@ class ImageCarousel extends React.Component {
     }
   }
 
+  onKeyPress(e){
+    if (e.key === 'ArrowRight'){
+      this.nextImage()
+    }
+
+    if (e.key === "ArrowLeft"){
+      this.prevImage()
+    }
+  }
+
   render(){
     return (
-        <div className="ImageContainer">
+        <div className="ImageContainer" onKeyDown={(e) => this.onKeyPress(e)} tabIndex="0">
           <div onClick={this.nextImage} className="RightArrow">
             <img className="Icon" src={RightArrow} alt="Right-Arrow-Icon" />
           </div>
