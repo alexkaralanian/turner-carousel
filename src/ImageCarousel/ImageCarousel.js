@@ -52,10 +52,6 @@ class ImageCarousel extends React.Component {
     shuffle(imageURLs)
   }
 
-  // componentDidMount(){
-  //   document.addEventListener('keydown', this.keyPress, false);
-  // }
-
   nextImage(){
     if (this.state.imageIndex < imageURLs.length - 1) {
       this.setState({
@@ -77,7 +73,7 @@ class ImageCarousel extends React.Component {
       this.nextImage()
     }
 
-    if (e.key === "ArrowLeft"){
+    if (e.key === 'ArrowLeft'){
       this.prevImage()
     }
   }
